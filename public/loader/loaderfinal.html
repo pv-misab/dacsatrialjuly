@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+.button {
+   /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width:142px;
+  height:60px;
+  font-size:20px;
+  font-family:Arial;
+
+  
+}
+.button4:hover {background-color: #3e8e41}
+.button5:hover {background-color: #3e8e41}
+
+.button4:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button5:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  size: 50%;
+}
+
+.button4 {border-radius: 12px;
+		  background-color: #810101;
+          position:absolute;
+          right:0;
+          border:1px solid #01422D}
+          
+.button5 {border-radius: 12px;
+			background-color: #01422D;
+            position:absolute;
+            left:10px;
+            margin-left: auto;
+            margin-right: auto;
+           
+             }
+.buttoncenter {
+    
+    margin:auto;
+    width: 50%;
+  
+  padding: 10px;}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #B3C6C0;
+ 
+  object-fit:cover;
+  font-size:30px;
+}
+h1 {
+font-family:Arial;
+text-align: center;}
+.header{
+    position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color: #ffffff;
+   color: white;
+   text-align: center;
+   font-family:arial;
+   font-size:20px;
+   height:122px;
+
+}
+.greenborder{
+    position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color: #01422D;
+   color: white;
+   text-align: center;
+   font-family:arial;
+   font-size:20px;
+   height:173px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 60%;
+}
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.footer {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #01422D;
+   color: white;
+   text-align: center;
+   font-family:arial;
+   font-size:15px;
+   height:100px;
+}
+.next{position:absolute;
+	right:30px;
+    bottom:13px;
+    }
+.logo{
+    position: absolute;
+    right:30px;
+
+    top:10px;
+}
+
+.abort{
+    position: absolute;
+    right:300px;
+
+    top:22.5px;
+}
+
+.smart{
+    position: absolute;
+    left:30px;
+
+    top:20px;
+}
+
+.back{
+position:absolute;
+	left:30px;
+    bottom:13px;
+}
+a:link{
+color:white;
+text-decoration:none;}
+
+.login{
+    width:70%;
+    height:160px;
+    margin-left:auto;
+    margin-right:auto;
+    border:2px solid #3e8e41;
+    background-color: #ffffff;
+    align-content: center;
+    position:fixed;
+    bottom:15%;
+    left:15%;
+    
+}
+.formt{
+    font-family: arial;
+    font-size:20px;
+    color:#01422D ;
+    padding:12px;
+
+}
+#one {
+    display: block;
+    color: black;
+    font-family: arial;
+    font-size:20px;
+}
+#two{
+    position:relative;
+    top:-55px;
+    left:100px;
+   
+}
+
+#t2{
+    color: black;
+    font-family: arial;
+    font-size:20px;
+}
+#t3{
+    color: black;
+    font-family: arial;
+    font-size:20px;
+}
+
+.swipe{
+    padding: 5px;
+    position:fixed;
+    left:1225px;
+    top:69%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="greenborder">
+
+</div>
+<div class="header" >
+    <img class="smart" src="dtsmart.png">
+    <img class="logo" src="dacsalogo.png">>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- <div class="conatainer">
+<div class="login" >
+    <form class="formt" action="auth" method="POST">
+    <label id ="one" for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required style="width:300px; height:50px;">
+    <label id="two" for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required style="width:300px; height:50px;">
+
+    <button class="button button5" type="submit">Login</button>
+    <img class="swipe" src="swipe.png">
+    </form>
+
+</div>
+</div> -->
+
+
+    <table>
+      <tr>
+        <th>Checklists</th>
+        <th>Options</th>
+   
+      </tr>
+      <tr>
+        <td>Is metal detector active</td>
+        <td><%= data[0].options %></td>
+        
+      <tr>
+        <td>Is metal detector clear of impurities and debris</td>
+        <td><%= data[1].options %></td>
+       
+      </tr>
+      <tr>
+        <td>Does metal detector activate reject chute</td>
+        <td><%= data[2].options %></td>
+      
+      </tr>
+      <tr>
+        <td>Is conveyor inlet probe clear</td>
+        <td><%= data[3].options %></td>
+       
+      </tr>
+      <tr>
+        <td>Is conveyor outlet probe clear</td>
+        <td><%= data[4].options %></td>
+        
+      <tr>
+        <td>Are 4 x belt alignment switches open</td>
+        <td><%= data[5].options %></td>
+       
+      </tr>
+      <tr>
+        <td>Is conveyor clear for use</td>
+        <td><%= data[6].options %></td>
+      
+      </tr>
+      <tr>
+        <td>Does conveyor have maintenance record and is in date</td>
+        <td><%= data[7].options %></td>
+       
+      </tr>
+      
+    </table> 
+    <a href="/noyesloader" ><button class="button button5"  type="submit">Submit</button></a>
+    <a href="/lq8" ><button class="button button4"  type="submit">Back</button></a>
+
+<div class="footer" >
+     <p class="back" > <a href="url">© DT Engineering NW Ltd</a></p>
+  </div>
+
+</body>
+</html>
